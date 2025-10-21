@@ -3,12 +3,24 @@
   "namedInputs": {
     "default": [
       "{projectRoot}/**/*",
+      "!{projectRoot}/dist/**",
+      "!{projectRoot}/README.md",
+      "!{projectRoot}/CHANGELOG.md",
+      "!{projectRoot}/**/*.spec.*",
       "sharedGlobals"
     ],
     "production": [
-      "default"
+      "default",
+      "!{projectRoot}/**/*.test.*",
+      "!{projectRoot}/**/*.spec.*",
+      "!{projectRoot}/jest.*",
+      "!{projectRoot}/vitest.*"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": [
+      "{workspaceRoot}/LICENSE",
+      "{workspaceRoot}/tsconfig.base.json",
+      "{workspaceRoot}/package.json"
+    ]
   },
   "plugins": [
     {
@@ -25,5 +37,40 @@
         }
       }
     }
-  ]
+  ],
+  "generators": {
+    "@nx/plugin:plugin": {
+      "compiler": "tsc",
+      "e2eTestRunner": "none",
+      "unitTestRunner": "none",
+      "linter": "none",
+      "publishable": false,
+      "skipLintChecks": true
+    },
+    "@nx/plugin:executor": {
+      "skipLintChecks": true,
+      "unitTestRunner": "none"
+    },
+    "@nx/plugin:generator": {
+      "skipLintChecks": true,
+      "unitTestRunner": "none"
+    },
+    "@nx/js:library": {
+      "bundler": "tsc",
+      "includeBabelRc": false,
+      "linter": "none",
+      "minimal": true,
+      "publishable": false,
+      "strict": true,
+      "unitTestRunner": "none"
+    }
+  },
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "outputs": ["{projectRoot}/dist"]
+    }
+  }
 }
