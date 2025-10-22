@@ -75,7 +75,7 @@
   },
   "release": {
     "projects": ["packages/*"],
-    "projectsRelationship": "fixed",
+    "projectsRelationship": "independent",
     "version": {
       "conventionalCommits": true,
       "preVersionCommand": "npm install && nx run-many -t build"
