@@ -4,6 +4,7 @@
   "private": false,
   "description": "spellbookx cSpell shared config",
   "keywords": [
+    "spellbookx",
     "cspell",
     "cspell-config"
   ],
@@ -40,7 +41,8 @@
   "devDependencies": {
     "@cspell/cspell-types": "^9.2.1",
     "@types/node": "^20.19.9",
-    "tsdown": "^0.15.9"
+    "tsdown": "^0.15.9",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "cspell": "^9.2.2"
