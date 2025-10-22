@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./packages/cspell-config"
+    },
+    {
+      "path": "./packages/commitlint-config"
     }
   ]
 }
