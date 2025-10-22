@@ -69,16 +69,7 @@
           "commands": [
             "tsdown"
           ]
-        },
-        "dependsOn": [
-          {
-            "projects": [
-              "errors"
-            ],
-            "target": "build",
-            "params": "forward"
-          }
-        ]
+        }
       },
       "watch": {
         "executor": "nx:run-commands",
