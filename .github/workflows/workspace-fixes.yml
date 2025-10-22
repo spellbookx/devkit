@@ -43,6 +43,9 @@ jobs:
       - name: Install Dependencies
         run: npm install --ignore-scripts
 
+      - name: Build packages
+        run: npx nx run-many -t build
+
       - name: Sync Workspace
         run: npx nx sync
 
