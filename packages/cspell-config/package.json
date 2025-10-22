@@ -1,6 +1,6 @@
 {
   "name": "@spellbookx/cspell-config",
-  "version": "0.21.0",
+  "version": "0.21.1",
   "private": false,
   "description": "spellbookx cSpell shared config",
   "keywords": [

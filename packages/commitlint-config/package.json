@@ -1,6 +1,6 @@
 {
   "name": "@spellbookx/commitlint-config",
-  "version": "0.21.0",
+  "version": "0.21.1",
   "private": false,
   "description": "spellbookx commitlint shared config",
   "keywords": [
