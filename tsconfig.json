@@ -8,6 +8,9 @@
     },
     {
       "path": "./packages/commitlint-config"
+    },
+    {
+      "path": "./packages/eslint-plugin"
     }
   ]
 }

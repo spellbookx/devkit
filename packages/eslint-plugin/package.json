@@ -1,0 +1,106 @@
+{
+  "name": "@spellbookx/eslint-plugin",
+  "version": "0.20.0",
+  "private": false,
+  "description": "spellbookx eslint plugin",
+  "keywords": [
+    "spellbookx",
+    "eslint",
+    "eslint-config",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/spellbookx/devkit#readme",
+  "bugs": {
+    "url": "https://github.com/spellbookx/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spellbookx/devkit",
+    "directory": "packages/eslint-plugin"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@spellbookx/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@cspell/eslint-plugin": "^9.2.2",
+    "@eslint/js": "^9.38.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsdoc": "^61.1.5",
+    "eslint-plugin-node-dependencies": "^1.2.0",
+    "eslint-plugin-package-json": "^0.57.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "globals": "^16.4.0",
+    "jsonc-eslint-parser": "^2.4.1",
+    "tslib": "^2.3.0",
+    "typescript-eslint": "^8.46.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.9",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "eslint": "^9.38.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "name": "eslint-plugin",
+    "tags": [
+      "scope:tool",
+      "tool:eslint"
+    ],
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "production"
+        ],
+        "outputs": [
+          "{projectRoot}/dist"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "parallel": false,
+          "commands": [
+            "tsdown"
+          ]
+        }
+      },
+      "watch": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "default"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "commands": [
+            "tsdown --watch"
+          ]
+        }
+      }
+    }
+  }
+}
