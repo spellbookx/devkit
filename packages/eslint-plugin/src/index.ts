@@ -16,13 +16,26 @@ import {
   configRecommendedReact,
 } from './configs/index.js';
 
+type ConfigName =
+  | 'ignores'
+  | 'javascript'
+  | 'react'
+  | 'json'
+  | 'markdown'
+  | 'cspell'
+  | 'prettier'
+  | 'recommended'
+  | 'recommended-react'
+  | 'recommended-no-spellcheck'
+  | 'recommended-no-spellcheck-react';
+
 const packagePath = new URL('../package.json', import.meta.url);
 const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8')) as {
   name: string;
   version: string;
 };
 
-const configs: Record<string, Linter.Config[]> = {
+const configs: Record<ConfigName, Linter.Config[]> = {
   // global ignores
   ignores: configIgnores,
 
