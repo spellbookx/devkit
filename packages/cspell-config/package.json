@@ -54,41 +54,43 @@
       "scope:tool",
       "tool:cspell"
     ],
-    "build": {
-      "executor": "nx:run-commands",
-      "inputs": [
-        "production"
-      ],
-      "outputs": [
-        "{projectRoot}/dist"
-      ],
-      "options": {
-        "cwd": "{projectRoot}",
-        "parallel": false,
-        "commands": [
-          "tsdown"
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "production"
+        ],
+        "outputs": [
+          "{projectRoot}/dist"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "parallel": false,
+          "commands": [
+            "tsdown"
+          ]
+        },
+        "dependsOn": [
+          {
+            "projects": [
+              "errors"
+            ],
+            "target": "build",
+            "params": "forward"
+          }
         ]
       },
-      "dependsOn": [
-        {
-          "projects": [
-            "errors"
-          ],
-          "target": "build",
-          "params": "forward"
+      "watch": {
+        "executor": "nx:run-commands",
+        "inputs": [
+          "default"
+        ],
+        "options": {
+          "cwd": "{projectRoot}",
+          "commands": [
+            "tsdown --watch"
+          ]
         }
-      ]
-    },
-    "watch": {
-      "executor": "nx:run-commands",
-      "inputs": [
-        "default"
-      ],
-      "options": {
-        "cwd": "{projectRoot}",
-        "commands": [
-          "tsdown --watch"
-        ]
       }
     }
   }
