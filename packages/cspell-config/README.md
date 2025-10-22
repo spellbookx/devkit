@@ -1,7 +1,7 @@
 # @spellbookx/cspell-config
 
-> Shared configuration for [CSpell](https://cspell.org) — tuned for polyglot monorepos (Node, Rust, Go, Python, and more).  
-> Clean. Opinionated. No junk, no false positives.
+Shared configuration for [CSpell](https://cspell.org) — tuned for polyglot monorepos (Node, Rust, Go, Python, and more).  
+Clean. Opinionated. No junk, no false positives.
 
 ---
 
@@ -35,7 +35,7 @@
 
 ```bash
 npm install --global cspell
-npm install -D cspell @cspell/cspell-types @spellbookx/cspell-config
+npm install --save-dev cspell @cspell/cspell-types @spellbookx/cspell-config
 ```
 
 ---

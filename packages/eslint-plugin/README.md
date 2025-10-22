@@ -17,6 +17,7 @@ This plugin offers a unified, modern ESLint Flat Config setup to reduce configur
 ## Installation
 
 ```bash
+npm install --global eslint
 npm install --save-dev eslint @spellbookx/eslint-plugin
 ```
 

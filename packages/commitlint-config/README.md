@@ -1,15 +1,15 @@
 # @spellbookx/commitlint-config
 
-> Shared Commitlint configuration — standardizing commit message formatting across JS/TS projects.  
-> Conventional commits, interactive prompts, and multi-scope support included.  
-> Clean. Opinionated. Always consistent.
+Shared Commitlint configuration — standardizing commit message formatting across JS/TS projects.  
+Conventional commits, interactive prompts, and multi-scope support included.  
+Clean. Opinionated. Always consistent.
 
 ---
 
 ## Table of Content
 
 - [Features](#features)
-- [Install](#install)
+- [Install](#installation)
 - [Usage](#usage)
 - [With CLI](#with-cli)
 - [With Lefthook](#with-lefthook)
@@ -58,7 +58,7 @@
 
 ---
 
-## Install
+## Installation
 
 ```bash
 npm install --global commitizen cz-git
