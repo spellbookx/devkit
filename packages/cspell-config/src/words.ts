@@ -1,0 +1,18 @@
+export const words = [
+  'auctor',
+  'criscito',
+  'davide',
+  'dcdavidev',
+  'dotenvx',
+  'esbenp',
+  'famiglio',
+  'gopath',
+  'hiberfil',
+  'ipynb',
+  'mjsx',
+  'mtsx',
+  'spellbookx',
+  'stefanzweifel',
+  'tabler',
+  'vuoto',
+];

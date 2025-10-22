@@ -87,6 +87,7 @@
   "allowCompoundWords": true,
   "caseSensitive": false,
   "words": [
+    "auctor",
     "criscito",
     "davide",
     "dcdavidev",
@@ -98,8 +99,8 @@
     "ipynb",
     "mjsx",
     "mtsx",
-    "stefanzweifel",
     "spellbookx",
+    "stefanzweifel",
     "tabler",
     "vuoto"
   ],

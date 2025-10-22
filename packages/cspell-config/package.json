@@ -1,0 +1,95 @@
+{
+  "name": "@spellbookx/cspell-config",
+  "version": "0.20.0",
+  "private": false,
+  "description": "spellbookx cSpell shared config",
+  "keywords": [
+    "cspell",
+    "cspell-config"
+  ],
+  "homepage": "https://github.com/spellbookx/devkit#readme",
+  "bugs": {
+    "url": "https://github.com/spellbookx/devkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spellbookx/devkit",
+    "directory": "packages/cspell-config"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@spellbookx/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@cspell/cspell-types": "^9.2.1",
+    "@types/node": "^20.19.9",
+    "tsdown": "^0.15.9"
+  },
+  "peerDependencies": {
+    "cspell": "^9.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "nx": {
+    "name": "cspell-config",
+    "tags": [
+      "scope:tool",
+      "tool:cspell"
+    ],
+    "build": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        "production"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "options": {
+        "cwd": "{projectRoot}",
+        "parallel": false,
+        "commands": [
+          "tsdown"
+        ]
+      },
+      "dependsOn": [
+        {
+          "projects": [
+            "errors"
+          ],
+          "target": "build",
+          "params": "forward"
+        }
+      ]
+    },
+    "watch": {
+      "executor": "nx:run-commands",
+      "inputs": [
+        "default"
+      ],
+      "options": {
+        "cwd": "{projectRoot}",
+        "commands": [
+          "tsdown --watch"
+        ]
+      }
+    }
+  }
+}

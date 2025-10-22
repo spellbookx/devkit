@@ -118,6 +118,12 @@ prettier --check .
 cspell lint .
 ```
 
+or use a convenient script:
+
+```bash
+npm run lint:fmt
+```
+
 ---
 
 ## Pull Requests

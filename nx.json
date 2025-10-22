@@ -72,5 +72,26 @@
       "inputs": ["production", "^production"],
       "outputs": ["{projectRoot}/dist"]
     }
+  },
+  "release": {
+    "projects": ["packages/*"],
+    "projectsRelationship": "fixed",
+    "version": {
+      "conventionalCommits": true,
+      "preVersionCommand": "npm install && nx run-many -t build"
+    },
+    "changelog": {
+      "workspaceChangelog": false,
+      "projectChangelogs": {
+        "createRelease": "github",
+        "file": false
+      }
+    },
+    "git": {
+      "commit": true,
+      "stageChanges": true,
+      "tag": true,
+      "push": true
+    }
   }
 }
