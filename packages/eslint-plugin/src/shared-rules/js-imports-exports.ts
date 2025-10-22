@@ -88,7 +88,7 @@ export const jsRulesImportsExports: Linter.RulesRecord = {
         ['^react-native', '^react-navigation', '^@react-native'],
 
         // Expo SDK
-        ['^expo$', String.raw`^@expo\/`, String.raw`^expo\-`],
+        ['^expo$', String.raw`^@expo\/`, String.raw`^expo-`],
 
         // Node.js Backend Frameworks and utilities
         [
@@ -112,7 +112,7 @@ export const jsRulesImportsExports: Linter.RulesRecord = {
           '^passport',
 
           // Log
-          String.raw`^pino\-`,
+          String.raw`^pino-`,
           '^winston',
           '^morgan',
 

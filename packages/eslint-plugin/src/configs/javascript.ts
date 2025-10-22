@@ -25,9 +25,7 @@ const configJavascript: Linter.Config[] = defineConfig([
       jsdoc,
       import: importPlugin,
       prettier: prettierPlugin,
-      unicorn,
       'simple-import-sort': simpleImportSort,
-      '@typescript-eslint': tseslint,
     },
     extends: [
       js.configs.recommended,
