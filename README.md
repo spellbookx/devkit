@@ -1,11 +1,20 @@
-@spellbookx/devkit
+# @spellbookx/devkit
 
 > A unified toolkit for consistent, maintainable, and automated development workflows.
 
 ---
 
-This project is currenlty in active development!
+## Shared Configs and Plugins
+
+- [commitlint-config](./packages/commitlint-config/README.md)
+- [cspell-config](./packages/cspell-config/README.md)
+- [eslint-plugin](./packages/eslint-plugin/README.md)
+- [prettier-config](./packages//prettier-config/README.md)
 
 ## License
 
-MIT © [Davide Di Criscito](https://github.com/dcdavidev)
+This project is licensed under the MIT License.
+
+**Copyright (c) 2025 Davide Di Criscito**
+
+For the full details, see the [LICENSE](LICENSE) file.
