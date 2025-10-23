@@ -61,6 +61,7 @@ export const jsRulesCommon: Linter.RulesRecord = {
     },
   ],
   'jsdoc/require-description': 'warn',
+  'jsdoc/require-returns-type': 'off',
 
   // Prettier
   'prettier/prettier': 'error',
