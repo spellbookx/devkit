@@ -45,30 +45,26 @@ npm install --save-dev cspell @cspell/cspell-types @spellbookx/cspell-config
 Create a custom dictionary:
 
 ```bash
+mkdir .cspell
 touch .cspell/custom-words.txt
 ```
 
-Then create or update your `cspell.config.mjs` at the root of your project:
+Then create or update your `cspell.json` at the root of your project:
 
-```ts
-import { defineConfig } from 'cspell';
-
-/** @type { import("@cspell/cspell-types").CSpellUserSettings } */
-const cspell = defineConfig({
-  version: '0.2',
-  import: ['@spellbookx/cspell-config'],
-
-  dictionaries: ['custom-words'],
-
-  dictionariesDefinition: [
+```json
+{
+  "version": "0.2",
+  "import": ["@spellbookx/cspell-config"],
+  "words": [],
+  "dictionaryDefinitions": [
     {
-      name: 'custom-words',
-      path: './.cspell/custom-words.txt',
-    },
+      "name": "custom-words",
+      "path": "./.cspell/custom-words.txt",
+      "addWords": true
+    }
   ],
-});
-
-export default cspell;
+  "dictionaries": ["custom-words"]
+}
 ```
 
 Then, run:
