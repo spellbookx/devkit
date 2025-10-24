@@ -62,7 +62,7 @@ Clean. Opinionated. Always consistent.
 
 ```bash
 npm install --global commitizen cz-git
-npm install --save-dev commitizen cz-git @commitlint/cli @spellbookx/commitlint-config
+npm install --save-dev commitizen cz-git conventional-changelog-conventionalcommits @commitlint/cli @spellbookx/commitlint-config
 ```
 
 ---
