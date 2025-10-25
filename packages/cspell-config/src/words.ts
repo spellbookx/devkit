@@ -15,4 +15,5 @@ export const words = [
   'stefanzweifel',
   'tabler',
   'vuoto',
+  'weba',
 ];

@@ -148,13 +148,14 @@ export const jsRulesImportsExports: Linter.RulesRecord = {
           '^tailwindcss',
           '^react-native-paper',
           '^native-base',
+          '^@lottiefiles',
         ],
 
         // Common icon packages.
         [
-          '^@tabler',
-          '^@fortawesome',
           String.raw`^@expo\/vector-icons`,
+          '^@fortawesome',
+          '^@tabler',
           '^react-native-vector-icons',
           '^react-native-feather',
           '^lucide',
@@ -167,8 +168,9 @@ export const jsRulesImportsExports: Linter.RulesRecord = {
         [
           String.raw`^.+\.s?css$`,
           String.raw`^.+\.(png|jpe?g|gif|webp|svg)$`,
-          String.raw`^.+\.(mp3|wav|ogg)$`,
-          String.raw`^.+\.(mp4|avi|mov)$`,
+          String.raw`^.+\.(mp3|wav|ogg|weba)$`,
+          String.raw`^.+\.(mp4|avi|mov|mkv|webm)$`,
+          String.raw`^.+\.(lottie)$`,
         ],
       ],
     },
