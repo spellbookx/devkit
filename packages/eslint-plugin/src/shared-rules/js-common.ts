@@ -49,24 +49,6 @@ export const jsRulesCommon: Linter.RulesRecord = {
   'unicorn/prevent-abbreviations': 'off',
   'unicorn/explicit-length-check': 'warn',
 
-  // JSDoc (encourage documentation)
-  'jsdoc/require-jsdoc': [
-    'warn',
-    {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-      },
-    },
-  ],
-  'jsdoc/require-description': 'warn',
-  'jsdoc/require-param-type': 'off',
-  'jsdoc/require-property-type': 'off',
-  'jsdoc/require-throws-type': 'off',
-  'jsdoc/require-yields-type': 'off',
-  'jsdoc/require-returns-type': 'off',
-
   // Prettier
   'prettier/prettier': 'error',
 };

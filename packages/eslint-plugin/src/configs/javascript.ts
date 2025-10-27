@@ -7,6 +7,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
+import { jsDocRules } from 'src/shared-rules/jsdoc.js';
 import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
 
@@ -45,6 +46,7 @@ const configJavascript: Linter.Config[] = defineConfig([
     },
     rules: {
       ...jsRulesCommon,
+      ...jsDocRules,
       ...jsRulesImportsExports,
     },
   },
