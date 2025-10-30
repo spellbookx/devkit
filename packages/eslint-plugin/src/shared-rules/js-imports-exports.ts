@@ -78,6 +78,7 @@ export const jsRulesImportsExports: Linter.RulesRecord = {
           '^react$',
           '^react-dom$',
           '^react',
+          '^react-intl',
           '^react-router',
           '^@tanstack/router',
         ],
@@ -164,6 +165,7 @@ export const jsRulesImportsExports: Linter.RulesRecord = {
 
         // Style & Asset Imports
         [
+          String.raw`^.+\.json$`,
           String.raw`^.+\.s?css$`,
           String.raw`^.+\.(png|jpe?g|gif|webp|svg)$`,
           String.raw`^.+\.(mp3|wav|ogg|weba)$`,
