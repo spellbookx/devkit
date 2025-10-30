@@ -3,8 +3,7 @@ import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import';
 import nodeDependencies from 'eslint-plugin-node-dependencies';
 import prettierPlugin from 'eslint-plugin-prettier';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import eslintReact from '@eslint-react/eslint-plugin';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
@@ -28,35 +27,30 @@ const configReact: Linter.Config[] = defineConfig([
       import: importPlugin,
       prettier: prettierPlugin,
       'simple-import-sort': simpleImportSort,
-      react: reactPlugin,
-      'react-hooks': reactHooks,
     },
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
+      eslintReact.configs['recommended-typescript'],
       nodeDependencies.configs['flat/recommended'],
       unicorn.configs.recommended,
-      reactPlugin.configs.flat.recommended,
-      reactPlugin.configs.flat['jsx-runtime'],
-      reactHooks.configs.flat['recommended-latest'],
     ],
     languageOptions: {
       sourceType: 'module',
-      ...reactPlugin.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.browser,
         ...globals.es2022,
+      },
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
       // Common rules
       ...jsRulesCommon,
       ...jsRulesImportsExports,
-
-      // React
-      'react-hooks/exhaustive-deps': 'error',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
 
       // Unicorn
       'unicorn/filename-case': 'off',
