@@ -61,10 +61,11 @@ export const jsDocRules: Linter.RulesRecord = {
 
   'jsdoc/tag-lines': [
     'warn',
-    'any',
     {
-      startLines: 1,
-      endLines: 1,
+      startLines: 0,
+      endLines: 0,
+      betweenLines: 1,
+      allowBlankLines: true,
     },
   ],
 };
