@@ -7,16 +7,14 @@ import type { Linter } from 'eslint';
  * 'eslint-plugin-simple-import-sort' for structured, predictable grouping
  * and sorting of import statements.
  *
- * Required plugins:
- * - 'eslint-plugin-simple-import-sort'
- * - 'eslint-plugin-import' (While 'simple-import-sort' is used for sorting,
- * 'eslint-plugin-import' is generally required for other import-related
- * linting rules not shown here, and is a common dependency in projects
- * using structured imports.)
+ * **USAGE**
+ * - Required plugins:
+ *   - 'eslint-plugin-simple-import-sort'
+ *   - 'eslint-plugin-import'
  *
- * Register the plugins listed above as below:
- * - import: importPlugin,
- * - 'simple-import-sort': simpleImportSort,
+ * - Register the plugins listed above as below:
+ *   - import: importPlugin,
+ *  - 'simple-import-sort': simpleImportSort,
  */
 export const jsRulesImportsExports: Linter.RulesRecord = {
   // Disable the default ESLint rule in favor of the custom plugin
