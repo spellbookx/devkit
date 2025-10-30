@@ -78,7 +78,7 @@
     "projectsRelationship": "independent",
     "version": {
       "conventionalCommits": true,
-      "preVersionCommand": "npm install && nx run-many -t build"
+      "preVersionCommand": "npm install --ignore-scripts && nx run-many -t build"
     },
     "changelog": {
       "workspaceChangelog": false,
