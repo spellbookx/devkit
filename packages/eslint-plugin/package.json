@@ -86,6 +86,7 @@
           "cwd": "{projectRoot}",
           "parallel": false,
           "commands": [
+            "npx tsc --project tsconfig.lib.json",
             "tsdown"
           ]
         }
