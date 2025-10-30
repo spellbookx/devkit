@@ -65,7 +65,6 @@ export const jsDocRules: Linter.RulesRecord = {
     {
       startLines: 0,
       endLines: 0,
-      betweenLines: 1,
       allowBlankLines: true,
     },
   ],
