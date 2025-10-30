@@ -29,7 +29,6 @@ const configReact: Linter.Config[] = defineConfig([
       prettier: prettierPlugin,
       'simple-import-sort': simpleImportSort,
       react: reactPlugin,
-      // @ts-expect-error no dts
       'react-hooks': reactHooks,
     },
     extends: [
@@ -39,7 +38,6 @@ const configReact: Linter.Config[] = defineConfig([
       unicorn.configs.recommended,
       reactPlugin.configs.flat.recommended,
       reactPlugin.configs.flat['jsx-runtime'],
-      // @ts-expect-error no dts
       reactHooks.configs.flat['recommended-latest'],
     ],
     languageOptions: {
