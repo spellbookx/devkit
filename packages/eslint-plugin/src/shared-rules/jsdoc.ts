@@ -63,9 +63,8 @@ export const jsDocRules: Linter.RulesRecord = {
     'warn',
     'any',
     {
-      startLines: 0,
-      endLines: 0,
-      allowBlankLines: true,
+      startLines: 1,
+      endLines: 1,
     },
   ],
 };
