@@ -174,14 +174,13 @@ const IMPORT_GROUPS = [
  * This configuration disables the default 'sort-imports' rule and relies on
  * 'eslint-plugin-simple-import-sort' for predictable grouping and sorting.
  *
- * USAGE:
- * - Required plugins:
- *   - eslint-plugin-simple-import-sort
- *   - eslint-plugin-import
+ * **Required plugins:**
+ * - eslint-plugin-simple-import-sort
+ * - eslint-plugin-import.
  *
- * - Register plugins as:
- *   - import: importPlugin
- *   - simple-import-sort: simpleImportSort
+ * **Register plugins as:**
+ * - import: importPlugin
+ * - simple-import-sort: simpleImportSort.
  */
 export const jsRulesImportsExports: Linter.RulesRecord = {
   // Disable the built-in sort-imports rule in favor of plugin

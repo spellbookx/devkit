@@ -8,18 +8,17 @@ import type { Linter } from 'eslint';
  * methods, and classes, while avoiding type redundancy when TypeScript
  * already provides type information.
  *
- * **USAGE**:
- * - Required plugins:
- *   - eslint-plugin-jsdoc
+ * **Required plugins:**
+ * - eslint-plugin-jsdoc.
  *
- * - Register the plugins above as below:
- *   - jsdoc
+ * **Register the plugins above as below:**
+ * - jsdoc.
  *
- * - Extend these configs:
- *   - jsdoc.configs['flat/contents-typescript-flavor'],
- *   - jsdoc.configs['flat/logical-typescript-flavor'],
- *   - jsdoc.configs['flat/requirements-typescript-flavor'],
- *   - jsdoc.configs['flat/stylistic-typescript-flavor'],
+ * **Extend these configs:**
+ * - jsdoc.configs['flat/contents-typescript-flavor'],
+ * - jsdoc.configs['flat/logical-typescript-flavor'],
+ * - jsdoc.configs['flat/requirements-typescript-flavor'],
+ * - jsdoc.configs['flat/stylistic-typescript-flavor'],.
  */
 export const jsDocRules: Linter.RulesRecord = {
   'jsdoc/require-jsdoc': [
@@ -42,10 +41,8 @@ export const jsDocRules: Linter.RulesRecord = {
   'jsdoc/check-tag-names': 'error',
 
   'jsdoc/check-alignment': 'warn',
-  'jsdoc/check-indentation': ['warn', 'spaces'],
+  'jsdoc/check-indentation': 'warn',
   'jsdoc/require-description-complete-sentence': 'warn',
-
-  'jsdoc/prefer-tag': ['warn', { tag: 'returns', replaceWith: 'return' }],
 
   'jsdoc/no-undefined-types': 'error',
   'jsdoc/empty-tags': 'error',

@@ -9,19 +9,18 @@ import type { Linter } from 'eslint';
  * It also enforces clean code style, safe modern JavaScript patterns,
  * and proper documentation through **Prettier**, **Unicorn**, and **JSDoc**.
  *
- * ** USAGE**
- * -  Required plugins:
- *   - typescript
- *   - typescript-eslint
- *   - eslint-plugin-unicorn
- *   - eslint-plugin-prettier ('eslint-config-prettier' must be installed too)
- *   - eslint-plugin-jsdoc
+ * **Required plugins:**
+ * - typescript
+ * - typescript-eslint
+ * - eslint-plugin-unicorn
+ * - eslint-plugin-prettier ('eslint-config-prettier' must be installed too)
+ * - eslint-plugin-jsdoc.
  *
- * - Register the plugins as follows:
- *   - '@typescript-eslint': tseslint
- *   - unicorn: unicornPlugin
- *   - prettier: prettierPlugin
- *   - jsdoc: jsdoc
+ * **Register the plugins as follows:**
+ * - '@typescript-eslint': tseslint
+ * - unicorn: unicornPlugin
+ * - prettier: prettierPlugin
+ * - jsdoc: jsdoc.
  */
 export const jsRulesCommon: Linter.RulesRecord = {
   // TS: allow unused prefixed with "_"

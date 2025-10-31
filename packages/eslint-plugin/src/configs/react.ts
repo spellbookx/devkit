@@ -3,12 +3,12 @@ import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import';
 import nodeDependencies from 'eslint-plugin-node-dependencies';
 import prettierPlugin from 'eslint-plugin-prettier';
-import eslintReact from '@eslint-react/eslint-plugin';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
+import eslintReact from '@eslint-react/eslint-plugin';
 
 import { jsRulesCommon } from '../shared-rules/js-common.js';
 import { jsRulesImportsExports } from '../shared-rules/js-imports-exports.js';
