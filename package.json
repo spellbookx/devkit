@@ -41,7 +41,7 @@
     "@nx/js": "22.0.2",
     "@spellbookx/commitlint-config": "^0.20.0",
     "@spellbookx/cspell-config": "^0.20.0",
-    "@spellbookx/eslint-plugin": "^0.20.0",
+    "@spellbookx/eslint-plugin": "^0.23.3",
     "@spellbookx/prettier-config": "^0.20.0",
     "@swc-node/register": "^1.11.1",
     "@swc/core": "^1.13.5",
