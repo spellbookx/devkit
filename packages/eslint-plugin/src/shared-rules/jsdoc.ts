@@ -41,7 +41,6 @@ export const jsDocRules: Linter.RulesRecord = {
   'jsdoc/check-property-names': 'error',
   'jsdoc/check-tag-names': 'error',
 
-  'jsdoc/newline-after-description': ['warn', 'always'],
   'jsdoc/check-alignment': 'warn',
   'jsdoc/check-indentation': ['warn', 'spaces'],
   'jsdoc/require-description-complete-sentence': 'warn',
