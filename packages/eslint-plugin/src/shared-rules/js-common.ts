@@ -43,6 +43,7 @@ export const jsRulesCommon: Linter.RulesRecord = {
   'unicorn/no-instanceof-array': 'error',
   'unicorn/prefer-includes': 'error',
   'unicorn/prefer-string-replace-all': 'error',
+  'unicorn/prefer-top-level-await': 'off',
   'unicorn/prefer-type-error': 'error',
   'unicorn/throw-new-error': 'error',
   'unicorn/no-null': 'off',
